@@ -1,0 +1,177 @@
+iframe{
+  border:  none;
+  width: 71.5%;
+  height: 433px;
+  transition: 1s;
+  z-index: 2;
+}
+
+
+
+#videos h1{
+  font-size: large;
+  text-align: center;
+}
+#videos p{
+  font-size: medium;
+  margin-inline: 20px;
+  color: white;
+}
+
+.container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.mySlides {
+    display: none;
+    justify-content: center;
+    position: relative;
+    height: 433px;
+}
+
+.desc{
+  position: absolute;
+  height: 100%;
+  width: 30%;
+  background-color: rgb(#952f2f40);
+  opacity: 0;
+  z-index: -1;
+  
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 10000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  z-index: 3;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  position: relative;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+#videos{
+  height:  450px;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+
+.other{
+  opacity: 1;
+  transform: translateX(117%);
+  transition: 0.7s ease;
+  z-index: 1;
+}
+
+.activeVid{
+  transform: translateX(-21.8%);
+  transition: 0.7s;
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 880px) {
+  section{
+    width: 95%;
+  }
+
+  .other{
+    transform: translatey(143%);
+    height: 180px;
+  }
+  
+  iframe{
+    width: 100%;
+  }
+
+  .activeVid{
+    transform: translatey(-14%);
+    height: 300px;
+  }
+
+  .activeDot{
+    bottom: -145;
+  }
+
+  .prev, .next{
+    top: 40%;
+  }
+
+  .desc{width: 100%;}
+}
+
+
+

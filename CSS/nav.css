@@ -1,0 +1,371 @@
+:root{
+    --first-color: hsl(222,80%,58%);
+    --dark-color: hsl(222,24%,8%);
+    --tittle-color: hsl(222,8%,8%);
+    --text-color-light: hsl(222,8%,65%);
+    --white-color: #fff;
+    --body-color: hsl(222,100%,99%);
+    --small-font-size:.813rem;
+}
+.nav-lab{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position:absolute;
+    width: 100%;
+    height: 54px;
+    background-color: rgb(0, 0, 0, 0.9);
+    display: none;
+    margin-bottom: 20px;
+}
+nav{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position:relative;
+    width: 100%;
+    background-color: rgba(8, 0, 14, 0.9);
+    display: flex;
+    align-items: center;
+    
+}
+.hola {
+    background-color: #47a386;
+    border:0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgb(0,0,0,0.2);
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 25px;
+}
+.logo{
+    position: relative;
+    width: 54px;
+}
+nav a{
+    position: relative;
+    margin-left: 10px;
+    text-decoration: none;
+}
+.buscar_cont{
+    margin-left: 5%;
+    position: absolute;
+    top: 10px;
+    left: 550px;
+    width: 56px;
+    height: 56px;
+    background-color: var(--white-color);
+    box-shadow: 0 4px 24px hsla(222, 68%,12%,.1);
+    border-radius: 4rem;
+    overflow: hidden;
+    transition: width .5s cubic-bezier(.9, 0, .3, .9);
+    z-index: 1;
+}
+.buscar_in{
+    border:none;
+    outline: none;
+    width: calc(100%-64px);
+    height:100%;
+    border-radius: 4rem;
+    padding-left: 14px;
+    font-size: (--small-font-size);
+    font-weight: 500;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s;
+}
+.buscar_in:-webkit-autofill{
+    box-shadow: 0 0 0 100px var(--white-color) inset;
+}
+.buscar_boton{
+    width: 46px;
+    height: 46px;
+    background-color: var(--dark-color);
+    border-radius:  50%;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    right: 5px;
+    margin: auto;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: transform .6s cubic-bezier(.9,0,.3,.9);
+}
+.search_icon,
+.search_close{
+    color: var(--white-color);
+    font-size: 1.5rem;
+    position: absolute;
+    transition: opacity .5s cubic-bezier(.9,0,.3,.9);
+}
+.search_close{
+    opacity: 0;
+}
+.show-search{
+    z-index: 1;
+    width: 20%;
+}
+.show-search .buscar_in{
+    opacity: 1;
+    pointer-events: initial;
+}
+.show-search .buscar_boton{
+    transform: rotate(90deg);
+}
+.show-search .search_icon{
+    opacity: 0;
+}
+.show-search .search_close{
+    opacity: 1;
+}
+/*En esta clase definimos las caracteriticas del bottom*/
+.btn-neon{
+	/*Hacemos que se modifiquen los elementos segun el tamaño disponible y los ordenamos en linea*/
+	position: relative;
+	display: inline-block;
+	font-family: 'Kodchasan', sans-serif;
+	padding: 15px 10px;
+	/*Con esto le quitamos el fondo al boton*/
+	color: #fff;
+	/*Definimos las caracteristicas del texto*/
+	letter-spacing: 4px;
+	font-size: 12px;
+	text-decoration: none;
+	/*Ocultamos todos los elementos que no esten dentro del contenedor*/
+	overflow: hidden;
+	/*Tiempo de transicion para el hover*/
+	transition: 0.2s;
+}
+/*Definimmos los estructura de los span, algo a señalar, es la propieda position absolute ya que son clase sobrepuesta pero que realizen animaciones distintas*/
+.btn-neon span{
+position: absolute;
+display: block;
+}
+/*Este span se encarga de realizar una animacion en el borde superior cuando pasamos el puntero sobre el boton*/
+#span1{
+	/*Le damos un top 0 para que este se encuentre pegado a la parte superior*/
+	top: 0;
+	/*Le damos un left con el valor -100% porque es el inicio de la animacion que va recorrer*/
+	left: -100%;
+	width: 100%;
+	/*Con el esto definimos el ancho del borde*/
+	height: 2px;
+	/*Con este efecto apliacamos un degrado al color que nostros escogamos para el borde*/
+	background: linear-gradient(90deg,transparent,#a945c7);
+
+}
+/*Este es el efecto hover que aplicamos sobre el span1*/
+.btn-neon:hover #span1{
+	/*Al modificar el valor de left hacemos que se crea una transicion en el borde del boton*/
+	left: 100%;
+	transition: 1s;
+    
+}
+/*Este span se encarga de realizar una animacion en el borde inferior cuando pasamos el puntero sobre el boton*/
+#span3{
+	/*Le damos un bottom 0 para que este se encuentre pegado a la parte inferior*/
+	bottom: 0;
+	/*Le damos un right con el valor -100% porque es el inicio de la animacion que va recorrer*/
+	right: -100%;
+	width: 100%;
+	/*Con el esto definimos el ancho del borde*/
+	height: 2px;
+	/*Con este efecto apliacamos un degrado al color que nostros escogamos para el borde*/
+	background: linear-gradient(270deg,transparent,#a945c7);
+}
+/*Este es el efecto hover que aplicamos sobre el span3*/
+.btn-neon:hover #span3{
+	/*Al modificar el valor de rignt hacemos que se crea una transicion en el borde del boton*/
+	right: 100%;
+	transition: 1s;
+	/*Es necesario crear un delay antes de que la asiguiente animacion se ejecute segun el orden establecido*/
+	transition-delay: 0.5s ;
+}
+/*Este span se encarga de realizar una animacion en el borde derecho cuando pasamos el puntero sobre el boton*/
+#span2{
+	/*Le damos un bottom con el valor -100% porque es el inicio de la animacion que va recorrer*/
+	top: -100%;
+	/*Le damos un right 0 para que este se encuentre pegado a la parte derecha*/
+	right: 0;
+	/*Con el esto definimos el ancho del borde*/
+	width: 2px;
+	height: 100%;
+	/*Con este efecto apliacamos un degrado al color que nostros escogamos*/
+	background: linear-gradient(180deg,transparent,#a945c7);
+}
+/*Este es el efecto hover que aplicamos sobre el span2*/
+.btn-neon:hover #span2{
+	/*Al modificar el valor de top hacemos que se crea una transicion en el borde del boton*/
+	top: 100%;
+	transition: 1s;
+	/*Es necesario crear un delay antes de que la asiguiente animacion se ejecute segun el orden establecido*/
+	transition-delay: 0.25s;
+}
+/*Este span se encarga de realizar una animacion en el borde izquierdo cuando pasamos el puntero sobre el boton*/
+#span4{
+	/*Le damos un bottom con el valor -100% porque es el inicio de la animacion que va recorrer*/
+	bottom: -100%;
+	/*Le damos un right 0 para que este se encuentre pegado a la parte izquierda*/
+	left: 0;
+	/*Con el esto definimos el ancho del borde*/
+	width: 2px;
+	height: 100%;
+	/*Con este efecto apliacamos un degrado al color que nostros escogamos*/
+	background: linear-gradient(360deg,transparent,#a945c7);
+}
+/*Este es el efecto hover que aplicamos sobre el span3*/
+.btn-neon:hover #span4{
+	/*Al modificar el valor de rignt hacemos que se crea una transicion en el borde del boton*/
+	bottom: 100%;
+	transition: 1s;
+	/*Es necesario crear un delay antes de que la asiguiente animacion se ejecute segun el orden establecido*/
+	transition-delay: 0.75s;
+}
+.user{
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    line-height: 46px;
+    margin: 0 10px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 3px solid #d8e2dc;
+    float: left;
+    transition: all 0.5s ease;
+    right: 2%;
+}
+.user_logo{
+    position: relative;
+    border-radius: 50%;
+    width: 46px;
+    height: 46px;
+    float: left;
+}
+.serach_user{
+    color: #d8e2dc;
+    position: relative;
+    font-size: 2.5rem;
+    transition: all 0.5s ease;
+}
+
+.display{
+    position: fixed;
+    width: 46px;
+    height: 46px;
+    line-height: 46px;
+    margin: 0 10px;
+    right: 0;
+    top: 10px;
+    cursor: pointer;
+    border: 3px solid #d8e2dc;
+    transition: all 0.5s ease;
+    left: 20px;
+    display: none;
+}
+.barras{
+    color: #d8e2dc;
+    position: relative;
+    font-size: 2.5rem;
+    transition: all 0.5s ease;
+}
+.user:hover{
+    border: 3px solid #a945c7;
+    box-shadow: 0 0 15px #a945c7;
+    transition: all 0.5s ease;
+}
+.user:hover .serach_user{
+    color: #a945c7;
+    text-shadow: 0 0 15px #a945c7;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+.display:hover{
+    border: 3px solid #a945c7;
+    box-shadow: 0 0 20px #a945c7;
+    transition: all 0.5s ease;
+} 
+.display:hover .barras{
+    color: #a945c7;
+    text-shadow: 0 0 15px #a945c7;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+.cerrar1{
+    display: none;
+    cursor: pointer;
+    color: #d8e2dc;
+    position: relative;
+    font-size: 2.5rem;
+    transition: all 0.5s ease;
+} 
+
+@media screen and (max-width: 880px) {
+    nav{
+        background-color: rgb(0, 0, 0,.9);
+        position: fixed;
+        display: inline-flex;
+        flex-direction: column;
+        left: -100%;
+        width: 200px;
+        margin-top: 74px;
+        height: 100%;
+        z-index: 12;
+    }
+
+    .cerrar1{
+        display: inline;
+    } 
+
+    .display{
+        display: inline;
+        z-index: 11;
+    }
+    .nav-lab{
+        position: fixed;
+        display: inline;
+        margin-bottom: 20px;
+        z-index: 11;
+    }
+    .logo{
+        order: -2;
+        width: 74px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .buscar_cont{
+        display: inline;
+        position: fixed;
+        left: 180px;
+        z-index: 12;
+    }
+    .show-search{
+        width: 40%;
+    }
+    .user{
+        order: -1;
+        left: 0;
+        position: relative;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+    .btn-neon{
+        font-size: 15px;
+    }
+    .showNav{
+    opacity: 1;
+    left: 0;   
+    }
+}
+
+@media screen and (max-width: 390px) {
+    nav{
+        width: 150px;
+    }
+
+    .buscar_cont{
+        left: 100px;
+    }
+    .show-search{
+        width: 60%;
+    }
+}
