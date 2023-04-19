@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="es">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,7 +26,7 @@
 <body>
 <div class="loaded"><img width="100%" height="100%" src="GIF/Comp1.gif" alt=""></div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<?php session_start();?>
+
     <div id="myModal" class="modal">
         <div class="modal-content">
             <span class="close" id = "close1">&times;</span>
@@ -108,6 +109,7 @@
         <div class="modal2">
             <span id="closes" class="close">&times;</span>
             <form  action="cerrarS.php" method="POST">
+            <div class='UserC'><img src='Img/user.jpg' class='modal2_user'></div>
             <h1>Bienvenid@ a CISTEAM</h1>
             <p><?php 
             if (isset($_SESSION['correo'])) 
@@ -117,6 +119,7 @@
             echo $_SESSION['nombre'];
             ?>
             </p>
+            <button class="btn-p" ><i class="ri-arrow-down-circle-line dowlong"></i>Descargar Contenido</button><br>
             <button class="btn-p" name="Cerrar" value="Enviar" >Cerrar Sesion</button>
             </form>
             <!--<button class="btn-p" id="closes">Cerrar</button>-->

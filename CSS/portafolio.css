@@ -18,11 +18,11 @@ body
 .loaded{
     display: flex;
     position: fixed;
-    background: linear-gradient(to right, #c90505 10%, #000000);  
+    background: linear-gradient(to right, #0a244f 10%, #000000);  
     height: 100%;
     width: 100%;
     overflow: hidden;
-    animation: loaded 5s ease-in;
+    animation: loaded 3s ease-in;
     animation-fill-mode: forwards;
     animation-delay: 2s;
     z-index: 30;
@@ -72,8 +72,9 @@ section img{
 }
 
 @keyframes loaded{
-    from {margin-left: 0;}
-    to{margin-left:-2000px}
+    from {opacity: 1;}
+    to{opacity: 0;
+       z-index: 0;}
 }
 
 
