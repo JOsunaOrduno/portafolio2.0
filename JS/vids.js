@@ -1,26 +1,41 @@
 var player, playing = false;
+var tag = document.createElement('script');
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+
 function onYouTubeIframeAPIReady() {
-    player = new YT.Player('video1', {
-        videoId: 'RWeFOe2Cs4k',
+    player = new YT.Player('Etiquetado', {
+        videoId: 'CLhDVYxpYiA',
+        events: {
+            'onStateChange': onPlayerStateChange,
+        }
+    });
+
+    player = new YT.Player('Inventario', {
+        videoId: 'laFhP3i_nvo',
         events: {
             'onStateChange': onPlayerStateChange
         }
     });
 
-    player = new YT.Player('video2', {
-        videoId: 'RWeFOe2Cs4k',
+
+    player = new YT.Player('GPS', {
+        videoId: 'PaL29FClOEw',
         events: {
             'onStateChange': onPlayerStateChange
         }
     });
 
-
-    player = new YT.Player('video3', {
-        videoId: 'RWeFOe2Cs4k',
-        events: {
-            'onStateChange': onPlayerStateChange
-        }
-    });
+    player = new YT.Player('Interface', {
+      videoId: 'KOrperYgVSA',
+      events: {
+          'onStateChange': onPlayerStateChange
+      }
+  });
+    
     
 }
 
@@ -55,19 +70,66 @@ function showSlides(n) {
 function onPlayerStateChange(event) {
     let text = document.getElementsByClassName("desc");
     let vid = document.getElementsByClassName("video");
-    let dot = document.getElementsByClassName("dot");
+
     if (event.data == YT.PlayerState.PLAYING) {
         //alert('video started');
         //text[slideIndex-1].style.display = "block";  
         text[slideIndex-1].className += " other";
         vid[slideIndex-1].className += " activeVid";
         //dot[slideIndex-1].className += " activeDot";
-        playing = true;
     }
-
-    else if(event.data == YT.PlayerState.PAUSED){
-        //alert('video paused');
-        playing = false;
-        
-    }
+    if (event.data == YT.PlayerState.PAUSED) {
+      //alert('video started');
+      //text[slideIndex-1].style.display = "block";  
+      text[slideIndex-1].className += " other";
+      vid[slideIndex-1].className += " activeVid";
+      //dot[slideIndex-1].className += " activeDot";
+  }
 }
+
+
+var next = document.getElementById("next");
+var prev = document.getElementById("prev");
+
+
+
+next.addEventListener('click', () => {
+	let vid = document.getElementsByClassName("video");
+  if(slideIndex==1)
+    vid[3].contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+  else
+    vid[slideIndex-2].contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+});
+
+
+prev.addEventListener('click', () => {
+	let vid = document.getElementsByClassName("video");
+  if(slideIndex==4)
+    vid[0].contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+  else
+    vid[slideIndex].contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+  console.log(slideIndex)
+});
+
+const boxes = document.querySelectorAll('.dot');
+
+boxes.forEach(dot => {
+  dot.addEventListener('click', function handleClick(event) {
+    let vid = document.getElementsByClassName("video");
+    for(let i=0; i<=3; i++)
+      vid[i].contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+  });
+});
+
+const closeDesc = document.querySelectorAll('.closeD');
+
+closeDesc.forEach(closeDesc => {
+  closeDesc.addEventListener('click', function handleClick(event) {
+    let text = document.getElementsByClassName("desc");
+    let vid = document.getElementsByClassName("video");
+    text[slideIndex-1].classList.remove("other");
+    vid[slideIndex-1].classList.remove("activeVid");
+  });
+});
+
+

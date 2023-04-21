@@ -172,9 +172,9 @@
 
 /*Formato del panel de colores*/
 .modal .overlay {
-	background: mediumslateblue;
-	background: -webkit-linear-gradient(to right, mediumslateblue, purple);
-	background: linear-gradient(to right, mediumslateblue, purple);
+	background: purple;
+	background: -webkit-linear-gradient(to right, darkorchid, darkmagenta);
+	background: linear-gradient(to right, darkorchid, darkmagenta);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;

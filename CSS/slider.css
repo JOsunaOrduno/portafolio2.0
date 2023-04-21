@@ -6,9 +6,27 @@ iframe{
   z-index: 2;
 }
 
+.closeD {
+  color: #aaa;
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
+  z-index: 1000;
+  right: 14%;
+  position: absolute;
+}
+
+.closeD:hover,
+.closeD:focus {
+  color: crimson;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 
 
 #videos h1{
+  color: crimson;
   font-size: large;
   text-align: center;
 }
@@ -38,7 +56,7 @@ iframe{
   background-color: rgb(#952f2f40);
   opacity: 0;
   z-index: -1;
-  
+  transition: 1s ease;
 }
 
 /* Slideshow container */
