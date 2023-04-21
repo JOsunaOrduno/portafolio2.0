@@ -18,6 +18,7 @@
     margin-bottom: 20px;
 }
 nav{
+    font-family: 'Kodchasan', sans-serif;
     padding-top: 15px;
     padding-bottom: 15px;
     position:relative;
@@ -220,6 +221,8 @@ display: block;
 	/*Es necesario crear un delay antes de que la asiguiente animacion se ejecute segun el orden establecido*/
 	transition-delay: 0.75s;
 }
+
+
 .user{
     position: absolute;
     width: 46px;
@@ -234,6 +237,15 @@ display: block;
     transition: all 0.5s ease;
     right: 2%;
 }
+
+.nombreUS{
+    position: absolute;
+    right: 9%;
+    color: #fff;
+    border-left: 2px solid #fff;
+    padding: 5px 0px 5px 5px;
+}
+
 .user_logo{
     position: relative;
     border-radius: 50%;
@@ -355,6 +367,13 @@ display: block;
     opacity: 1;
     left: 0;   
     }
+}
+
+@media screen and (max-width: 1020px){
+    .nombreUS{
+        display: none;
+    }
+    
 }
 
 @media screen and (max-width: 390px) {
