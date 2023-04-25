@@ -19,7 +19,6 @@ foreach($resultado as $row){
         $_SESSION['nombre'] = $row['nombre'];
         $_SESSION['correo'] = $row['correo'];
         $message = '<script>document.location.href="index.php";</script>';
-        echo $_SESSION['activo'];
         break;
         //
     }else{

@@ -7,8 +7,8 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 
 function onYouTubeIframeAPIReady() {
-    player = new YT.Player('Etiquetado', {
-        videoId: 'CLhDVYxpYiA',
+    player = new YT.Player('Interface', {
+        videoId: 'KOrperYgVSA',
         events: {
             'onStateChange': onPlayerStateChange,
         }
@@ -29,8 +29,8 @@ function onYouTubeIframeAPIReady() {
         }
     });
 
-    player = new YT.Player('Interface', {
-      videoId: 'KOrperYgVSA',
+    player = new YT.Player('Etiquetado', {
+      videoId: 'CLhDVYxpYiA',
       events: {
           'onStateChange': onPlayerStateChange
       }

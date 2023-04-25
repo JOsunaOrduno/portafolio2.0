@@ -13,13 +13,8 @@
     <title>Prueba</title>
     <link rel="shortcut icon" href="Img/LogoMini.png" type="image/x-icon">
     <!--<link rel="stylesheet" href="CSS/Estilos.css">-->
-    <link rel="stylesheet" href="CSS/login.css">
-    <link rel="stylesheet" href="CSS/modal.css">
-    <link rel="stylesheet" href="CSS/modal2.css">
     <link rel="stylesheet" href="CSS/nav.css">
     <link rel="stylesheet" href="CSS/portafolio.css">
-    <link rel="stylesheet" href="CSS/slider.css">
-    <link rel="stylesheet" href="CSS/card.css">
     <link rel="stylesheet" href="CSS/footer.css">
     <link rel="stylesheet" href="CSS/login2.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
@@ -28,27 +23,6 @@
 <body>
 <div class="loaded"><img width="100%" height="100%" src="GIF/Comp1.gif" alt=""></div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
-    <div class="model-container2" id="modal_container2">
-        <div class="modal2">
-            <span id="closes" class="close">&times;</span>
-            <form  action="cerrarS.php" method="POST">
-            <div class='UserC'><img src='Img/user.jpg' class='modal2_user'></div>
-            <h1>Bienvenid@ a CISTEAM</h1>
-            <p><?php 
-            if (isset($_SESSION['correo'])) 
-            echo $_SESSION['correo'];
-            echo "<br>";
-            if (isset($_SESSION['nombre'])) 
-            echo $_SESSION['nombre'];
-            ?>
-            </p>
-            <button class="btn-p" ><i class="ri-arrow-down-circle-line dowlong"></i>Descargar Contenido</button><br>
-            <button class="btn-p" name="Cerrar" value="Enviar" >Cerrar Sesion</button>
-            </form>
-            <!--<button class="btn-p" id="closes">Cerrar</button>-->
-        </div>
-    </div>
     <div class="nav-lab" id="menuDe"></div>
     <div class="display" id="display"><i class="ri-bar-chart-horizontal-line barras"></i></div>
     <form action="" class="buscar_cont" id="buscar_bar">
@@ -91,70 +65,81 @@
         <span id="span3"></span>
         <span id="span4"></span>
         </a> 
-       <?php
-            if (isset($_SESSION['activo']) && $_SESSION['activo'] == 1) {     
-                echo '<div class="nombreUS">';
-                echo $_SESSION['nombre'];
-                echo '</div>';            
-                echo "<div class='user'id='hola'><img src='Img/user.jpg' class='user_logo'></div>";
-            }
-        ?>        
         <i class="ri-close-line cerrar1" id="cerar1"></i>   
     </nav>
+
     <main>
-    <?php
-            if (isset($_SESSION['activo']) && $_SESSION['activo'] == 1) {     
-              require("includes/portafolio.php");
-            }else{
-                require("includes/login2.php");
-            }
-    ?> 
+        
+
+<div class="login-cont">
+    <div class="letras" style="margin-top:80px;">Bienvenido a Ciste@m</div>
+        <DIV class="form-regis-box">
+            <div class="form-value">
+                <form method="POST" action="return false" onsubmit="return false">
+                    <h2>Registro</h2>
+                    <label for="">Ingresa su nombre</label><br>
+                    <input type="text" name="nombre" id="nombreC" placeholder="Nombre" /><br>
+                    <label for="">Ingresa su correo</label><br>
+                    <input type="email" name="email"  id="emailC" placeholder="Correo" /><br>
+                    <label for="">Ingresa su contraseña</label><br>
+                    <input type="password" name="clave"  id="claveC" placeholder="Contraseña" /><br>
+                    <label  class="Noti" id="Regis"></label>
+                    <button type="submit" id="registrar">Registrarse</button>
+                    <div class="register"><p>Ya tienes cuenta<a href="index.php"> Ingresa</a></p></div>
+                    <script>
+                            $( "#registrar" ).click(function() {
+                            Registrar(document.getElementById('nombreC').value,document.getElementById('emailC').value,document.getElementById('claveC').value);                        
+                            });
+                            function Registrar(nombre,user, pass){
+                            $.ajax({
+                                url: 'NuevoUsu.php',
+                                type: 'POST',
+                                data: 'nombre='+nombre+'&email='+user+'&clave='+pass,
+                                success: function(resp){
+                                    $('#Regis').html(resp);
+                                },
+                            });}
+                        </script>
+                </form>
+            </div>
+        </DIV>
+    </div>
     </main>
+
+    <footer>
+        <div class="Interes">
+            <ul>
+                <h4>Paginas</h4>
+                <li>Inicio</li>
+                <li>Nosotros</li>
+            </ul>
+        </div>
+        <div class="Interes">
+            <ul>
+                <h4 style="opacity:0;">s</h4>  
+                <li>Servicios</li>
+                <li>Clientes</li>
+            </ul>
+        </div>
+        <div class="contactos">
+            <ul>
+                <h4>Contactanos</h4>
+                <li>Hola</li>
+                <li>ADIOS</li>
+            </ul>
+        </div>
+        <div class="direccion">
+            <ul>
+                <h4>Dirrecion</h4>
+                <li>Hola</li>
+                <li>ADIOS</li>
+            </ul>
+        </div>
+    </footer>
+    <div class="foo">2023 @CISTEAM</div>
     <script src="JS/nav.js"></script>
-            <?php
-            if (isset($_SESSION['activo']) && $_SESSION['activo'] == 1) {
-                echo "<script src='JS/script2.js'></script>";
-            }
-            ?>
 </body>
 
-<footer>
-<div class="Interes">
-<ul>
-    <h4>Paginas</h4>
-    <li>Inicio</li>
-    <li>Nosotros</li>
-</ul>
-</div>
-<div class="Interes">
-<ul>
-    <h4 style="opacity:0;">s</h4>  
-    <li>Servicios</li>
-    <li>Clientes</li>
-</ul>
-</div>
-<div class="contactos">
-<ul>
-    <h4>Contactanos</h4>
-    <li>Hola</li>
-    <li>ADIOS</li>
-</ul>
-</div>
-<div class="direccion">
-<ul>
-    <h4>Dirrecion</h4>
-    <li>Hola</li>
-    <li>ADIOS</li>
-</ul>
-</div>
-</footer>
-<div class="foo">2023 @CISTEAM</div>
-<script type="text/javascript">
-    window.addEventListener("scroll",function(){
-        var div=document.querySelector("div.card");        
-        div.classList.toggle("abajoServ",window.scrollY>600);
-    })
-</script>
-<script src="JS/vids.js"></script>
+
 
 </html>

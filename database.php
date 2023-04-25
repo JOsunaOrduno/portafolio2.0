@@ -7,13 +7,14 @@ class Database{
     private $username = 'cisteam2_dario';
     private $password = '200412771Dario';
     private $charset = 'utf8';
-    /*
+    
+     /*
     private $hostname = "localhost";
     private $database = "cisteam";
     private $username = 'root';
     private $password = '';
     private $charset = "utf8";
-    */
+   */
     function conectar(){ 
         try{
             $conexion = "mysql:host=".$this->hostname."; dbname=".$this->database ."; charset=".$this->charset;

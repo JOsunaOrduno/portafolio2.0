@@ -24,7 +24,8 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
             }
         }
         if (strlen($password) < 7) {
-            echo "El campo Contraseña no puede estar vacio, ni tener menos de 6 caracteres.<br>";
+            echo "El campo Contraseña no puede estar vacio,<br>";
+            echo "ni tener menos de 6 caracteres.<br>";
             $cont++;
         }
         if ($cont > 0){        
