@@ -119,6 +119,7 @@
 </body>
 
 <footer>
+<<<<<<< HEAD
 <div class="Interes">
 <ul>
     <h4>Paginas</h4>
@@ -149,12 +150,12 @@
 </div>
 </footer>
 <div class="foo">2023 @CISTEAM</div>
-<script type="text/javascript">
+<!--<script type="text/javascript">
     window.addEventListener("scroll",function(){
         var div=document.querySelector("div.card");        
         div.classList.toggle("abajoServ",window.scrollY>600);
     })
-</script>
+</script>-->
 <script src="JS/vids.js"></script>
 
 </html>
