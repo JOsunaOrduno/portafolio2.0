@@ -119,7 +119,6 @@
 </body>
 
 <footer>
-<<<<<<< HEAD
 <div class="Interes">
 <ul>
     <h4>Paginas</h4>
