@@ -11,6 +11,23 @@
 
 .card {border-radius: 10px;}
 
+.card h1{
+    text-align: center;
+    color: white;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    background-color: #8105052a;
+    transition:0.3s;
+    top: 35%;
+}
+.container2 .card:hover h1
+{
+    opacity: 0;
+    transition:0.3s;
+}
+
+
 .container2
 {
     position: relative;
@@ -29,7 +46,7 @@
     transition: 0.5s;
     justify-content: flex-start;
     align-items: center;
-    background-color: #27014150;
+    background-color: #a0060650;
     /*background: linear-gradient(45deg,  black, #c905056e);*/
 }
 
@@ -68,6 +85,8 @@
     visibility: visible;
     z-index: 2;
 }
+
+
 
 /*Formato del texto del texto de las tarjetas*/
 .container2 .card .content h2

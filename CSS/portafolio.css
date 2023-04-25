@@ -7,12 +7,7 @@ body
 {
     margin: 0;
     background-image: url(../Img/circuito1.png);
-    background-size: 105% 100%;
-    background-repeat: no-repeat;
-    background-attachment: absolute;
-    
-    
-
+    background-size: 100% 100%;
 }
 
 .loaded{
@@ -26,6 +21,22 @@ body
     animation-fill-mode: forwards;
     animation-delay: 2s;
     z-index: 30;
+}
+
+#clientes img, #mapa{
+    height: 200px;
+    
+}
+
+#valores {
+    height: 600px;
+    max-width: 1800px;
+    margin: 18mm;
+    text-align: center;
+}
+#valores img{
+    height: 80%;
+    width: 80%;
 }
 
 main{
@@ -69,6 +80,12 @@ section img{
     width: 70%;
     margin-left: auto;
     margin-right: auto;
+}
+
+#final{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
 
 @keyframes loaded{
