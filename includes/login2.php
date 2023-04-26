@@ -1,7 +1,7 @@
 
 
 <div class="login-cont">
-    <div class="letras">Bienvenido a Ciste@m</div>
+    <div class="letras" style="margin-top:80px;">Bienvenido a Ciste@m</div>
         <DIV class="form-box">
             <div class="form-value">
                 <form method="POST" action="return false" onsubmit="return false">
