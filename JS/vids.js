@@ -70,8 +70,6 @@ function showSlides(n) {
 function onPlayerStateChange(event) {
     let text = document.getElementsByClassName("desc");
     let vid = document.getElementsByClassName("video");
-    let a1 = document.getElementById("");
-    let a2 = document.getElementsByClassName("video");
 
     if (event.data == YT.PlayerState.PLAYING) {
         //alert('video started');

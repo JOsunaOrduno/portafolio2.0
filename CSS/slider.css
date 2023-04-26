@@ -1,10 +1,4 @@
-#videos iframe{
-  border:  none;
-  width: 71.5%;
-  height: 433px;
-  transition: 1s;
-  z-index: 2;
-}
+
 
 .closeD {
   color: #aaa;
@@ -125,6 +119,8 @@
   display: inline-block;
   transition: background-color 0.6s ease;
   position: relative;
+  position: relative;
+  z-index: 2;
 }
 
 .active, .dot:hover {
@@ -155,11 +151,21 @@
   z-index: 1;
 }
 
+
+
+#videos iframe{
+  border:  none;
+  width: 71.5%;
+  height: 433px;
+  transition: 1s;
+  z-index: 2;
+}
+
+
 .activeVid{
   transform: translateX(-21.8%);
   transition: 0.7s;
 }
-
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 880px) {
   section{
@@ -177,7 +183,8 @@
 
   .activeVid{
     transform: translatey(-14%);
-    height: 300px;
+    height: 300px !important;
+
   }
 
   .activeDot{
@@ -186,6 +193,7 @@
 
   .prev, .next{
     top: 40%;
+    z-index: 3;
   }
 
   .desc{width: 100%;}
@@ -200,18 +208,13 @@
 
   }
   #videos iframe{
-    height: 250px;
+    height: 250px !important;
+    top: 100px;
+    position: relative;
   }
-  .slideshow-container{
-    height: 250px;
+  .activeVid{
+    transform: translatey(-52%);
   }
-  #videos{
-    height: 270px;
-  }
-  .phoneActive{
-    height: 450px;
-  }
-  .phoneActive2{
-    height: 430px;
-  }
+
 }
+
