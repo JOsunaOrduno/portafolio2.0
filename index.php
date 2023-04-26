@@ -49,6 +49,11 @@
             <!--<button class="btn-p" id="closes">Cerrar</button>-->
         </div>
     </div>
+    <?php
+            if (isset($_SESSION['activo']) && $_SESSION['activo'] == 1) {     
+              require("includes/nav.php");
+            }
+    ?> 
     <main>
     <?php
             if (isset($_SESSION['activo']) && $_SESSION['activo'] == 1) {     
@@ -58,6 +63,11 @@
             }
     ?> 
     </main>
+    <?php
+            if (isset($_SESSION['activo']) && $_SESSION['activo'] == 1) {     
+              require("includes/footer.php");
+            }
+    ?> 
     <script src="JS/nav.js"></script>
             <?php
             if (isset($_SESSION['activo']) && $_SESSION['activo'] == 1) {

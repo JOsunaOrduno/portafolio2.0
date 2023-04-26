@@ -191,3 +191,27 @@
   .desc{width: 100%;}
 }
 
+@media only screen and (max-width: 450px) {
+  section{
+    width: 100%;
+  }
+  .other{
+    transform: translatey(120%);
+
+  }
+  #videos iframe{
+    height: 250px;
+  }
+  .slideshow-container{
+    height: 250px;
+  }
+  #videos{
+    height: 270px;
+  }
+  .phoneActive{
+    height: 450px;
+  }
+  .phoneActive2{
+    height: 430px;
+  }
+}
