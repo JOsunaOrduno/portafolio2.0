@@ -49,58 +49,11 @@
             <!--<button class="btn-p" id="closes">Cerrar</button>-->
         </div>
     </div>
-    <div class="nav-lab" id="menuDe"></div>
-    <div class="display" id="display"><i class="ri-bar-chart-horizontal-line barras"></i></div>
-    <form action="" class="buscar_cont" id="buscar_bar">
-            <input type="search" placeholder="Busqueda" class="buscar_in">
-            <div class="buscar_boton" id="buscar_boton">
-                <i class="ri-search-2-line search_icon"></i>
-                <i class="ri-close-line search_close"></i>
-            </div>
-    </form>  
-    <nav id="nav">
-        <img src="Img/cisteam_aguila.png" alt=""  class="logo">
-        <a href="#" class="btn-neon">
-        <span id="span1"></span>
-        <span id="span2"></span>
-        <span id="span3"></span>
-        <span id="span4"></span>    
-        Inicio
-        </a>
-        <a href="#" class="btn-neon">Nosotros
-        <span id="span1"></span>
-        <span id="span2"></span>
-        <span id="span3"></span>
-        <span id="span4"></span>
-        </a>        
-        <a href="#" class="btn-neon">Servicios
-        <span id="span1"></span>
-        <span id="span2"></span>
-        <span id="span3"></span>
-        <span id="span4"></span>
-        </a>
-        <a href="#" class="btn-neon">Contacto
-        <span id="span1"></span>
-        <span id="span2"></span>
-        <span id="span3"></span>
-        <span id="span4"></span>
-        </a>
-        <a href="#" class="btn-neon">Clientes
-        <span id="span1"></span>
-        <span id="span2"></span>
-        <span id="span3"></span>
-        <span id="span4"></span>
-        </a> 
-       <?php
+    <?php
             if (isset($_SESSION['activo']) && $_SESSION['activo'] == 1) {     
-                echo '<div class="nombreUS">';
-                echo $_SESSION['nombre'];
-                echo '</div>';            
-                echo "<div class='user'id='hola'><img src='Img/user.jpg' class='user_logo'></div>";
+              require("includes/nav.php");
             }
-        ?>        
-        <i class="ri-close-line cerrar1" id="cerar1"></i>   
-    </nav>
+    ?> 
     <main>
     <?php
             if (isset($_SESSION['activo']) && $_SESSION['activo'] == 1) {     
@@ -110,6 +63,11 @@
             }
     ?> 
     </main>
+    <?php
+            if (isset($_SESSION['activo']) && $_SESSION['activo'] == 1) {     
+              require("includes/footer.php");
+            }
+    ?> 
     <script src="JS/nav.js"></script>
             <?php
             if (isset($_SESSION['activo']) && $_SESSION['activo'] == 1) {
@@ -118,37 +76,6 @@
             ?>
 </body>
 
-<footer>
-<div class="Interes">
-<ul>
-    <h4>Paginas</h4>
-    <li>Inicio</li>
-    <li>Nosotros</li>
-</ul>
-</div>
-<div class="Interes">
-<ul>
-    <h4 style="opacity:0;">s</h4>  
-    <li>Servicios</li>
-    <li>Clientes</li>
-</ul>
-</div>
-<div class="contactos">
-<ul>
-    <h4>Contactanos</h4>
-    <li>Hola</li>
-    <li>ADIOS</li>
-</ul>
-</div>
-<div class="direccion">
-<ul>
-    <h4>Dirrecion</h4>
-    <li>Hola</li>
-    <li>ADIOS</li>
-</ul>
-</div>
-</footer>
-<div class="foo">2023 @CISTEAM</div>
 <!--<script type="text/javascript">
     window.addEventListener("scroll",function(){
         var div=document.querySelector("div.card");        
