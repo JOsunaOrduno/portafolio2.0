@@ -167,7 +167,7 @@
   transition: 0.7s;
 }
 /* On smaller screens, decrease text size */
-@media only screen and (max-width: 880px) {
+@media only screen and (max-width: 1000px) {
   section{
     width: 95%;
   }
@@ -192,7 +192,7 @@
   }
 
   .prev, .next{
-    top: 40%;
+    top: 250px;
     z-index: 3;
   }
 

@@ -33,11 +33,12 @@ body
     max-width: 1800px;
     margin: 18mm;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-#valores img{
-    height: 80%;
-    width: 80%;
-}
+
 
 main{
     display: flex;
@@ -94,14 +95,30 @@ section img{
        z-index: 0;}
 }
 
+#valores img{
+    width: 70%;
+}
 
+
+@media only screen and (max-width: 800px) {
+    /*#final{
+        flex-direction: column;
+        align-items: center;
+    }*/
+
+   
+    #clientes img, #mapa{
+        height: 120px;
+        width: 150px;
+    }
+}
 @media only screen and (max-width: 450px) {
     /*#final{
         flex-direction: column;
         align-items: center;
     }*/
-    #clientes img, #mapa{
-        height: 120px;
-        width: 150px;
+    #valores img{
+        width: 120%;
     }
+
 }
