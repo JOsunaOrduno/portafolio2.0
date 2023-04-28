@@ -22,6 +22,14 @@ body
     z-index: 30;
 }
 
+.loaded video{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
 #clientes img, #mapa{
     height: 200px;
     right: 10px;

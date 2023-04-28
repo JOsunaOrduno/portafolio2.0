@@ -17,7 +17,7 @@
     width: 100%;
     position: absolute;
     z-index: 1;
-    background-color: #8105052a;
+    background-color: #810505a8;
     transition:0.3s;
     top: 35%;
 }
@@ -46,7 +46,7 @@
     transition: 0.5s;
     justify-content: flex-start;
     align-items: center;
-    background-color: #a0060650;
+    background-color: #810505a8;;
     /*background: linear-gradient(45deg,  black, #c905056e);*/
 }
 
