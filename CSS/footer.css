@@ -1,32 +1,122 @@
 footer{
     padding: 0;
-    margin: 0;
+    margin-bottom: 0;
     font-family: 'Kodchasan', sans-serif;
     background-color: #070211;
     width: 100%;
     height: 150px;
     display: flex;
     justify-content: center;
+    align-items: center;
     color: #fff;
 }
 
-/*footer li{
-    margin-left: 60px;
-}*/
+.Interes{
+    font-size: 12px;  
+}
 
+
+.contactos li{
+    font-size: 12px;
+}
+
+.direccion li{
+    font-size: 12px;
+}
 
 .foo{
+    margin-top: 0;
     background-color: #070211;
     width: 100%;
     bottom: 10%;
     display: flex;
     justify-content: center;
+    align-items: center;
     color: #fff;
+    font-size: 8px;
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 1050px){
     .Interes{
         display: none;
     }
+
+    #Pagn1{
+        display: none;
+    }
+
     
+}
+
+@media screen and (max-width: 750px){
+    #contac2{
+        font-size: 12px; 
+    }
+
+    #dire3{
+        font-size: 12px;  
+    }
+    
+    .contactos li{
+        font-size: 9px;
+    }
+
+    .direccion li{
+        font-size: 9px;
+    }
+}
+
+@media screen and (max-width: 650px){
+    footer{
+        height: 250px;
+        flex-direction: column;
+        align-items: baseline;
+        position: relative;
+    }
+
+    #contac2{
+        border-right: 0;
+        margin-bottom: 20px;
+        border-bottom:  2px solid #fff; 
+    }
+    #dire3{
+        border-right: 0;
+        margin-bottom: 20px;
+        border-bottom:  2px solid #fff; 
+    }
+    .contactos ul{
+        font-size: 9px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .direccion ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+}
+
+#Pagn1{
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-right: 2px solid #fff;
+}
+
+#contac2{
+    margin-left: 20px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-right: 2px solid #fff; 
+}
+#dire3{
+    margin-left: 20px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-right: 2px solid #fff; 
 }
