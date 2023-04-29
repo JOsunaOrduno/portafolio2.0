@@ -21,12 +21,12 @@ nav{
     font-family: 'Kodchasan', sans-serif;
     padding-top: 15px;
     padding-bottom: 15px;
-    position:relative;
+    position:fixed;
     width: 100%;
     background-color: rgba(8, 0, 14, 0.9);
     display: flex;
     align-items: center;
-    
+    z-index: 10;
 }
 .hola {
     background-color: #47a386;
@@ -48,7 +48,7 @@ nav a{
 }
 .buscar_cont{
     margin-left: 5%;
-    position: absolute;
+    position: fixed;
     top: 10px;
     left: 550px;
     width: 56px;
@@ -58,7 +58,7 @@ nav a{
     border-radius: 4rem;
     overflow: hidden;
     transition: width .5s cubic-bezier(.9, 0, .3, .9);
-    z-index: 1;
+    z-index: 11;
 }
 .buscar_in{
     border:none;
@@ -261,7 +261,7 @@ display: block;
 }
 
 .display{
-    position: fixed;
+    position: absolute;
     width: 46px;
     height: 46px;
     line-height: 46px;
@@ -333,7 +333,6 @@ display: block;
         z-index: 11;
     }
     .nav-lab{
-        position: fixed;
         display: inline;
         margin-bottom: 20px;
         z-index: 11;
@@ -346,7 +345,6 @@ display: block;
     }
     .buscar_cont{
         display: inline;
-        position: fixed;
         left: 180px;
         z-index: 12;
     }

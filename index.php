@@ -26,7 +26,7 @@
     
 </head>
 <body>
-<div class="loaded"><video src="GIF/logopixel.mp4" height="100%" width="100%" autoplay muted></video></div>
+<div class="loaded"><video src="GIF/logopixel3.mp4"  autoplay muted></video></div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     
     <div class="model-container2" id="modal_container2">
