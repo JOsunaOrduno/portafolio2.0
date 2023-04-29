@@ -9,6 +9,7 @@ body
     background-size: 100% 100%;
 }
 
+
 .loaded{
     display: flex;
     position: fixed;
@@ -16,9 +17,9 @@ body
     height: 100%;
     width: 100%;
     overflow: hidden;
-    animation: loaded 3s ease-in;
+    animation: loaded 2.5s ease-in;   
     animation-fill-mode: forwards;
-    animation-delay: 2s;
+    animation-delay: 5.5s;
     z-index: 30;
     flex-wrap: wrap;
     align-items: center;
@@ -127,6 +128,10 @@ section img{
     }*/
     #valores img{
         width: 120%;
+    }
+    body{
+            background-size: 160% 95%;
+            background-position: 48%;
     }
 
 }
