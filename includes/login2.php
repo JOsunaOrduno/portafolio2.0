@@ -34,7 +34,7 @@
                                     $('#Ing').html(resp);
                                 },
                             });}
-                        </script>
+                </script>
             </form>
             </div>
         </DIV>

@@ -19,7 +19,7 @@
     <li>Contacto - 2222 0084 67 </li>
 </ul>
 </div>
-<h4 id="dire3">Dirreción</h4>
+<h4 id="dire3">Dirrecián</h4>
 <div class="direccion">
 <ul>
     <li>Dirección - Calle Roble #72 Col.2a sección González Ortega Puebla, Pue.</li>

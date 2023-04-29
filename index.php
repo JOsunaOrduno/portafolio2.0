@@ -30,7 +30,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     
     <div class="model-container2" id="modal_container2">
-        <div class="modal2">
+        <div class="modal2" id="modal2">
             <span id="closes" class="close">&times;</span>
             <form  action="cerrarS.php" method="POST">
             <div class='UserC'><img src='Img/user.jpg' class='modal2_user'></div>
@@ -44,9 +44,42 @@
             ?>
             </p>
             <button class="btn-p" ><i class="ri-arrow-down-circle-line dowlong"></i>Descargar Contenido</button><br>
+            <div class="btn-cont" id="cont" >Contactanos</div>
             <button class="btn-p" name="Cerrar" value="Enviar" >Cerrar Sesion</button>
             </form>
             <!--<button class="btn-p" id="closes">Cerrar</button>-->
+        </div>
+        <div class="formContac" id="formContac">
+            <span id="closes1" class="close1">&times;</span>
+            <form method="POST" action="return false" onsubmit="return false">
+                <label for="">Ingrese su nombre</label><br>
+                <input type="text" class="datos" id="nombreCons"><br>
+                <label for="">Ingrese correo con el nos podamos contactar</label><br>
+                <input type="text" class="datos" id="correoCons"><br>
+                <label for="">Ingrese su telefono</label><br>
+                <input type="text" class="datos" id="telefonoCons"><br>
+                <label for="">Descripcion del proyecto que quiere realizar</label><br>
+                <input type="text" class="descipt" id="temaCons"><br>
+                <div style="display:flex;">
+                    <button class="btn" id="consultar">Enviar formulario</button>
+                    <div class="infoCons" id="infoCons"></div>
+                </div>
+                
+            </form>
+            <script>
+                $( "#consultar" ).click(function() {
+                Validar(document.getElementById('nombreCons').value,document.getElementById('correoCons').value,document.getElementById('telefonoCons').value,document.getElementById('temaCons').value);                        
+                });
+                function Validar(nombre, correo, telefono, tema){
+                    $.ajax({
+                        url: 'cont.php',
+                        type: 'POST',
+                        data: 'nombre='+nombre+'&correo='+correo+'&telefono='+telefono+'&tema='+tema,
+                        success: function(resp){
+                        $('#infoCons').html(resp);
+                    },
+                });}
+                </script>
         </div>
     </div>
     <?php

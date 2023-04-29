@@ -75,7 +75,7 @@
                 <br>
                 <button class="confirmacion" id="confirma">Confirmar</button>
                 <br>
-                <a href="#" class="link" id="ild">Volver a enviar el correo de confirmacion</a>
+                <a href="confirmacion.php" class="link" id="ild">Volver a enviar el correo de confirmacion</a>
             </form>
             <script>
             $( "#confirma" ).click(function() {

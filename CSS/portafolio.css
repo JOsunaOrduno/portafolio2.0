@@ -39,7 +39,7 @@ body
 #valores {
     height: 600px;
     max-width: 1800px;
-    margin: 18mm;
+    margin: 16mm;
     text-align: center;
     display: flex;
     flex-direction: column;
