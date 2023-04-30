@@ -9,7 +9,6 @@ body
     background-size: 100% 100%;
 }
 
-
 .loaded{
     display: flex;
     position: fixed;
@@ -17,9 +16,9 @@ body
     height: 100%;
     width: 100%;
     overflow: hidden;
-    animation: loaded 2.5s ease-in;   
+    animation: loaded 3s ease-in;
     animation-fill-mode: forwards;
-    animation-delay: 5.5s;
+    animation-delay: 2s;
     z-index: 30;
     flex-wrap: wrap;
     align-items: center;
@@ -31,7 +30,7 @@ body
     width:100%;
 }
 
-#clientes img, #mapa{
+#clientes img{
     height: 200px;
     right: 10px;
     position: relative;
@@ -116,7 +115,7 @@ section img{
     }*/
 
    
-    #clientes img, #mapa{
+    #clientes img{
         height: 120px;
         width: 150px;
     }
@@ -128,10 +127,6 @@ section img{
     }*/
     #valores img{
         width: 120%;
-    }
-    body{
-            background-size: 160% 95%;
-            background-position: 48%;
     }
 
 }

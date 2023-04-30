@@ -124,5 +124,4 @@
             <div id = "clientes">
                 <img src="Img/clientes_.gif" alt="">
             </div>
-            <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.6871448073616!2d-98.21527652409351!3d19.077488151924463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cfc14836897bf5%3A0x8e37c6811a1805aa!2sRoble%2072%2C%20Jes%C3%BAs%20Gonz%C3%A1lez%20Ortega%2C%2072040%20Puebla%2C%20Pue.!5e0!3m2!1sen!2smx!4v1682402513641!5m2!1sen!2smx" style="border:0; border-radius:15px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
         </div>

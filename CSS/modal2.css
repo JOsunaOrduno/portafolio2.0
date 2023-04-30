@@ -69,8 +69,6 @@ ul.hola{
     position: fixed;
     opacity: 0;
     pointer-events: none;
-    top: 0;
-    left: 0;
     height: 100%;
     width: 100%;
     z-index: 15;
@@ -86,9 +84,7 @@ ul.hola{
     position: relative;
     z-index: 1;
     background-color: #fff;
-    right: -190px;
     width: 400px;
-    height: 500px;
     padding: 20px 20px;
     border-radius: 15px;
     box-shadow: 0 2px 4px rgb(0,0,0,0.2);
@@ -132,93 +128,9 @@ ul.hola{
     position: relative;
 }
 
-.formContac{
-    z-index: 0;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    background-color: #fff;
-    left: -150px;
-    width: 300px;
-    height: 500px;
-    border-radius: 15px;
-    padding: 20px 20px;
-    transition: 1s;
-}
 
-.formContacshow{
-    left: 0;
-}
-
-.formContac .datos{
-    width: 95%;
-    height: 20px;
-    border: 5px;
-    border: 2px solid #393541;
-}
-
-.formContac .descipt{
-    width: 95%;
-    height: 200px;
-    border: 2px solid #393541;
-}
-
-.formContac .btn{
-    color: #fff;
-    font-size: 15px;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 40px;
-    border-radius: 0;
-    background-color: #393541;
-    width: 100px;
-    height: 50px;
-}
-
-.formContac .infoCons{
-    
-    margin-top: 20px;
-    margin-left: 20px;
-}
-
-@media screen and (max-width: 810px){
+@media screen and (max-width: 410px) {
     .modal2{
-    
-        right:0;
-        bottom: -250px;
-        z-index: 1;
-        width: 350px;
+        width: 310px;
     }
-
-    .modal2move{
-        z-index: 0;
-    }
-
-    .modal2 h1{
-        font-size: 25px;
-    }
-    .formContac{
-        left: 0;
-        top: -290px;
-        z-index: 0;
-        width: 350px;
-    }
-    .formContacshow{
-        z-index: 1;
-    }
-    .model-container2{
-        flex-direction: column;
-    }
-    
-}
-
-@media screen and (max-width: 400px){
-    .modal2{
-        width: 300px
-    }
-
-    .formContac{
-        width: 300px
-    }
-    
 }
