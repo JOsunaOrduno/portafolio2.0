@@ -1,5 +1,4 @@
-<footer>
-
+<footer id="FooterMain">
 <div class="iconCont">
     <i class="ri-map-2-line icon-fote" id="map2"></i>
     <i class="ri-customer-service-2-line icon-fote" id="cntar"></i>

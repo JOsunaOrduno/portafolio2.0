@@ -16,7 +16,7 @@ ul.hola{
     position: relative;
     width: 100%;
     height: 200px;
-    background: linear-gradient(to right, #070211, #393541);
+    background: linear-gradient(to right, #25032a, #000000);;
 }
 .modal2_user{
     position: relative;
@@ -34,7 +34,7 @@ ul.hola{
 }
 
 .modal2 button{
-    background-color: #393541;
+    background-color: #10091c;
     height: 100%;
     border:0;
     border-radius: 15px;
@@ -46,7 +46,7 @@ ul.hola{
 }
 
 .btn-cont{
-    background-color: #393541;
+    background-color: #10091c;
     height: 100%;
     border:0;
     border-radius: 15px;
