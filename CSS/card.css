@@ -18,13 +18,13 @@
     position: absolute;
     z-index: 1;
     background-color: #810505a8;
-    transition:0.3s;
+    transition:1.3s;
     top: 35%;
 }
 .container2 .card:hover h1
 {
     opacity: 0;
-    transition:0.3s;
+    transition:1.3s;
 }
 
 
@@ -56,7 +56,7 @@
     left: 50%;
     transform: translateX(-50%);
     height: 300px;
-    transition: 0.5s;
+    transition: 1.5s;
 }
 
 /*Animacion movimiento de la imagen*/
@@ -73,7 +73,7 @@
     padding: 20px 20px 20px 40px;
     visibility: hidden;
     opacity: 0;
-    transition: 0.5s;
+    transition: 1.5s;
     
 }
 
