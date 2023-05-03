@@ -1,9 +1,12 @@
 
+        <!-- Seccion completa del slider de videos -->
         <section id="videos">      
             <div class="slideshow-container">
 
                 <div class="mySlides fade">
+                    <!-- Contenedor del video con el id de llamado -->
                     <div class="video" id="Interface"></div>
+                    <!-- Titulo y descripcion desplegable del video, solo deben estar dentro de closeD y desc para funcionar -->
                     <div class="desc">
                         <span class="closeD">&times;</span>
                         <h1>Interface</h1>
@@ -20,7 +23,9 @@
                 </div>
 
                 <div class="mySlides fade">
+                    <!-- Contenedor del video con el id de llamado -->
                     <div class="video" id="Inventario"></div>
+                    <!-- Titulo y descripcion desplegable del video, solo deben estar dentro de closeD y desc para funcionar -->
                     <div class="desc">
                         <span class="closeD">&times;</span>
                         <h1>Inventario</h1>
@@ -34,7 +39,9 @@
                 </div>
 
                 <div class="mySlides fade">
+                    <!-- Contenedor del video con el id de llamado -->
                     <div class="video" id="GPS"></div>
+                    <!-- Titulo y descripcion desplegable del video, solo deben estar dentro de closeD y desc para funcionar -->
                     <div class="desc">
                         <span class="closeD">&times;</span>
                         <h1>GPS</h1>
@@ -50,9 +57,12 @@
                 </div>
 
                 <div class="mySlides fade">
+                    <!-- Contenedor del video con el id de llamado -->
                     <div class="video" id="Etiquetado"></div>
+
                     <div class="desc">
                         <span class="closeD">&times;</span>
+                        <!-- Titulo y descripcion desplegable del video, solo deben estar dentro de closeD y desc para funcionar -->
                         <h1>Etiquetado</h1>
                         <p>      
                             El cliente necesita tener control sobre el producto terminado para 
@@ -63,14 +73,14 @@
                         </p>
                     </div>
                 </div>
-
+                <!-- Flechas para navegacion del slider -->
                 <a class="prev" id="prev" onclick="plusSlides(-1)">❮</a>
                 <a class="next" id="next" onclick="plusSlides(1)">❯</a>
 
             </div>
 
             <br>
-            
+            <!-- Puntos de navegacion del slider -->
             <div style="text-align:center">
                 <span class="dot" onclick="currentSlide(1)"></span> 
                 <span class="dot" onclick="currentSlide(2)"></span> 
@@ -78,8 +88,9 @@
                 <span class="dot" onclick="currentSlide(4)"></span> 
             </div>
         </section>
+        <!-- Fin de la seccion de videos -->
 
-            <!-- Contenedor de las tarjetas -->
+        <!-- Contenedor de las tarjetas -->
         <div class="tarjetas">
             <div class = "container2">
                 <!--Primer tarjeta-->
@@ -115,11 +126,14 @@
             </div>
         </div>
 
+        <!--Planeta de los valores centrado para el circulo -->
         <div id="valores">
             <h2>Valores</h2>
             <img src="GIF/planetsVal_.gif" alt="">
             
         </div>
+
+        <!--Clientes alineado a la izquieda-->
         <div id="final">
             <div id = "clientes">
                 <img src="Img/clientes_.gif" alt="">

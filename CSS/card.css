@@ -1,16 +1,4 @@
-/*Formato de tarjetas*/
-.tarjetas{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-.card {border-radius: 10px;}
-
+/*Titulo inicial de las tarjetas que desaparece*/
 .card h1{
     text-align: center;
     color: white;
@@ -27,6 +15,18 @@
     transition:1.3s;
 }
 
+/*Formato de tarjetas*/
+.tarjetas{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.card {border-radius: 10px;}
 
 .container2
 {

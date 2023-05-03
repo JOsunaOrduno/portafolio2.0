@@ -1,15 +1,18 @@
 var player, playing = false;
 var tag = document.createElement('script');
 
+//Carga de la api de youtube para asegurar que los videos carguen correctamente
 tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-
+//Llamado a videos, definicion de las claves de videos
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('Interface', {
+        //Id del video que va a cargar el div del html
         videoId: 'KOrperYgVSA',
         events: {
+          //Definicion de funcion cuando cambia de estado
             'onStateChange': onPlayerStateChange,
         }
     });
@@ -39,6 +42,7 @@ function onYouTubeIframeAPIReady() {
     
 }
 
+//Conteo del video actual
 let slideIndex = 1;
 showSlides(slideIndex);
 
@@ -50,6 +54,7 @@ function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
+//Movimiento del slider cuando se presiona una flecha o un boton
 function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("mySlides");
@@ -67,6 +72,7 @@ function showSlides(n) {
 
 }
 
+//Funcion que se activa cuando cambia de estado el video, aqui se muestra la descripcion del video
 function onPlayerStateChange(event) {
     let text = document.getElementsByClassName("desc");
     let vid = document.getElementsByClassName("video");
@@ -87,12 +93,12 @@ function onPlayerStateChange(event) {
   }
 }
 
-
+//Definicion de las flechas
 var next = document.getElementById("next");
 var prev = document.getElementById("prev");
 
 
-
+//Pausador de videos cuando se cambia de video con la flecha
 next.addEventListener('click', () => {
 	let vid = document.getElementsByClassName("video");
   if(slideIndex==1)
@@ -112,7 +118,7 @@ prev.addEventListener('click', () => {
 });
 
 const boxes = document.querySelectorAll('.dot');
-
+//Pausador de videos cuando se cambia de videos con los puntos
 boxes.forEach(dot => {
   dot.addEventListener('click', function handleClick(event) {
     for(let i=0; i<=3; i++)
@@ -121,7 +127,7 @@ boxes.forEach(dot => {
 });
 
 const closeDesc = document.querySelectorAll('.closeD');
-
+//Span de X cerrado de la descripcion de los videos, solo cierra la descripcion actual
 closeDesc.forEach(closeDesc => {
   closeDesc.addEventListener('click', function handleClick(event) {
     document.getElementsByClassName("desc")[slideIndex-1].classList.remove("other");
