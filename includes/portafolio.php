@@ -130,7 +130,7 @@
         <div id="circulo">
             <div id="valor">
                 <h2>Valores</h2>
-                <img src="GIF/planetsVal_.gif" alt="">
+                <img src="GIF/valoresNav.gif" alt="">
             </div>
             <div id="organiImagen"><img src="GIF/organigrama.gif" id="org" alt=""></div>
         </div>

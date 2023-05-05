@@ -1,10 +1,6 @@
 const signUpButton = document.getElementById('signUp');
 const signInButton = document.getElementById('signIn');
 const container = document.getElementById('container');
-const orgImg = document.getElementById('org');
-const orgBtn = document.getElementById('organigrama');
-const orgDiv = document.getElementById('organiImagen');
-const valo = document.getElementById('valor');
 var modal = document.getElementById("myModal");
 var btn = document.getElementById("myBtn");
 
@@ -33,13 +29,18 @@ span.onclick = function() {
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
+  
   if (event.target == modal) {
     modal.style.display = "none";
     document.body.classList.remove("stop-scrolling");
   }
 }
 
+const orgBtn = document.getElementById('organigrama');
 orgBtn.onclick = function(event) {
+  const orgImg = document.getElementById('org');
+  const orgDiv = document.getElementById('organiImagen');
+  const valo = document.getElementById('valor');
   if (!orgDiv.classList.contains("oActive")) {
     orgDiv.className += " oActive";
     valo.className += " valActive";

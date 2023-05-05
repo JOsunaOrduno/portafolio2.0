@@ -185,7 +185,7 @@ section img{
 
 
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1000px) {
     /*#final{
         flex-direction: column;
         align-items: center;
@@ -196,6 +196,13 @@ section img{
         height: 120px;
         width: 150px;
     }
+
+    .oActive{
+        transform: translate(-45%, -32%);
+    }
+    #circulo #organiImagen .oScale{
+        width: 10%;
+    }
 }
 @media only screen and (max-width: 450px) {
     /*#final{
@@ -203,7 +210,7 @@ section img{
         align-items: center;
     }*/
     #circulo img{
-        width: 120%;
+        width: 100%;
     }
     /*Cambio de tamanio del fondo en caso de estar en un celular*/
     body 
@@ -211,5 +218,18 @@ section img{
         background-size: 150% 95%;
         background-position: 48%;
     }
+    #organigrama{
+        font-size: 15px;
 
+    }
+
+    #circulo #organiImagen .oScale{
+        width: 100%;
+        transform: scale(1);
+        border-radius: 0;
+        border: 1px;
+    }
+    .oActive{
+        transform: translate(0,-27%);
+    }
 }
