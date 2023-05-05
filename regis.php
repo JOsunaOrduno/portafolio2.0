@@ -13,15 +13,13 @@
     <title>Prueba</title>
     <link rel="shortcut icon" href="Img/LogoMini.png" type="image/x-icon">
     <!--<link rel="stylesheet" href="CSS/Estilos.css">-->
-    <link rel="stylesheet" href="CSS/nav.css">
     <link rel="stylesheet" href="CSS/portafolio.css">
-    <link rel="stylesheet" href="CSS/footer.css">
     <link rel="stylesheet" href="CSS/login2.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
     
 </head>
 <body>
-<div class="loaded"><video src="GIF/pixelLogo2.mp4"  autoplay muted></video></div>
+<!--<div class="loaded"><video src="GIF/pixelLogo2.mp4"  autoplay muted></video></div>-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <main>        
 <div class="login-cont">
@@ -36,25 +34,26 @@
                     <input type="email" name="email"  id="emailC" placeholder="Correo" /><br>
                     <label for="">Ingresa su contraseña</label><br>
                     <input type="password" name="clave"  id="claveC" placeholder="Contraseña" /><br>
-                    <label  class="Noti" id="Regis"></label>
-                    <button type="submit" id="registrar">Registrarse</button>
-                    <div class="register"><p>Ya tienes cuenta<a href="index.php"> Ingresa</a></p></div>
-                    <script>
-                            $( "#registrar" ).click(function() {
-                            Registrar(document.getElementById('nombreC').value,document.getElementById('emailC').value,document.getElementById('claveC').value);                        
-                            });
-                            function Registrar(nombre,user, pass){
-                            $.ajax({
-                                url: 'NuevoUsu.php',
-                                type: 'POST',
-                                data: 'nombre='+nombre+'&email='+user+'&clave='+pass,
-                                success: function(resp){
-                                    $('#Regis').html(resp);
-                                },
-                            });}
-                        </script>
                 </form>
             </div>
+            <label  class="Noti" id="Regis"></label>
+            <button type="submit" id="registrar">Registrarse</button>
+            <div class="register"><p>Ya tienes cuenta<a href="index.php"> Ingresa</a></p></div>
+            <script>
+                    $( "#registrar" ).click(function() {
+                        Registrar(document.getElementById('nombreC').value,document.getElementById('emailC').value,document.getElementById('claveC').value);                        
+                    });
+                    function Registrar(nombre,user, pass){
+                        $.ajax({
+                            url: 'NuevoUsu.php',
+                            type: 'POST',
+                            data: 'nombre='+nombre+'&email='+user+'&clave='+pass,
+                            success: function(resp){
+                             $('#Regis').html(resp);
+                            },
+                        });
+                    }
+            </script>
         </DIV>
     </div>
     </main>

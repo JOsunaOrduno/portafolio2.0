@@ -132,12 +132,15 @@ button{
     border-radius: 20px;
     backdrop-filter: blur(15px);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 20PX;
 }
 
 .form-regis-box h2{
+    justify-content: center;
+    align-items: center;
     font-size: 2em;
     color:white;
     text-align: center;
@@ -158,10 +161,13 @@ button{
 }
 
 .form-regis-box button{
-    margin-top: 50px;
+    height: 10%;
+    width: 60%;
+    margin-top: 20px;
 }
 
 .form-regis-box .Noti{
+    padding-top: 20px;
     position: relative;
     display: flex;
     align-items: center;
