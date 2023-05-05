@@ -37,7 +37,7 @@ body
 }
 
 /*Centrado y formato de los valores*/
-#valores {
+#circulo {
     height: 600px;
     max-width: 1800px;
     margin: 16mm;
@@ -98,7 +98,79 @@ section img{
     display: flex;
     width: 100%;
     justify-content: space-between;
+    align-items: flex-end;
 }
+
+#final button{
+    background-color: red;
+    border: solid 2px wheat;
+    height: 50px;
+    width: 150px;
+
+}
+#organigrama img{
+    width: 100px;
+}
+
+#organigrama {
+    color: #6e2385;
+    border: 6px solid #6e2385;
+    border-radius: 15px;
+    padding: 5px 5px;
+    font-size: 25px;
+    font-family: tahoma;
+    letter-spacing: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    filter: drop-shadow(0 0 15px #6e2385) drop-shadow(0 0 50px #6e2385) contrast(2) brightness(2);
+    transition: .5s;
+    margin: 15px;
+  }
+  
+  #organigrama:hover {
+    color: black;
+    background-color: #6e2385;
+    filter: drop-shadow(0 0 20px #6e2385) contrast(2) brightness(2);
+  }
+  #organiImagen{
+    position: absolute;
+    width: 100%;
+    height: 1200px;
+    transition: 1s;
+  }
+
+  #circulo #organiImagen img{
+    width: 7%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 200px;
+    border: 0.2px solid #6e2385;
+    filter: drop-shadow(0 0 2px #6e2385) drop-shadow(0 0 7px #6e2385) brightness(1.5);
+    transition: ease 0.7s;
+    opacity: 0;
+  }
+
+  #valor{
+    transition: 1s;
+    position: absolute;
+    width: 100%;
+    }
+
+  .valActive{
+    transform: translateY(-36%);
+    transition: 1s;
+  }
+  .oActive{
+    transform: translate(-47%, -25%);
+    transition: 1s;
+  }
+  #circulo #organiImagen .oScale{
+    transform: scale(7);
+    transition: ease 1s;
+    opacity: 1;
+  }
+  
 
 @keyframes loaded{
     from {opacity: 1;}
@@ -106,9 +178,11 @@ section img{
        z-index: 0;}
 }
 
-#valores img{
-    width: 70%;
+#circulo img{
+    width: 45%;
 }
+
+
 
 
 @media only screen and (max-width: 800px) {
@@ -128,7 +202,7 @@ section img{
         flex-direction: column;
         align-items: center;
     }*/
-    #valores img{
+    #circulo img{
         width: 120%;
     }
     /*Cambio de tamanio del fondo en caso de estar en un celular*/

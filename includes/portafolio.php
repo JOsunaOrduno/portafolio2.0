@@ -127,10 +127,12 @@
         </div>
 
         <!--Planeta de los valores centrado para el circulo -->
-        <div id="valores">
-            <h2>Valores</h2>
-            <img src="GIF/planetsVal_.gif" alt="">
-            
+        <div id="circulo">
+            <div id="valor">
+                <h2>Valores</h2>
+                <img src="GIF/planetsVal_.gif" alt="">
+            </div>
+            <div id="organiImagen"><img src="GIF/organigrama.gif" id="org" alt=""></div>
         </div>
 
         <!--Clientes alineado a la izquieda-->
@@ -138,4 +140,5 @@
             <div id = "clientes">
                 <img src="Img/clientes_.gif" alt="">
             </div>
+            <div id="organigrama">organigrama</div>
         </div>
