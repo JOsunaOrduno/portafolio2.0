@@ -3,6 +3,7 @@ const signInButton = document.getElementById('signIn');
 const container = document.getElementById('container');
 var modal = document.getElementById("myModal");
 var btn = document.getElementById("myBtn");
+
 var span = document.getElementsByClassName("close")[0];
 
 
@@ -28,11 +29,32 @@ span.onclick = function() {
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
+  
   if (event.target == modal) {
     modal.style.display = "none";
     document.body.classList.remove("stop-scrolling");
   }
 }
+
+const orgBtn = document.getElementById('organigrama');
+orgBtn.onclick = function(event) {
+  const orgImg = document.getElementById('org');
+  const orgDiv = document.getElementById('organiImagen');
+  const valo = document.getElementById('valor');
+  if (!orgDiv.classList.contains("oActive")) {
+    orgDiv.className += " oActive";
+    valo.className += " valActive";
+    orgImg.className += " oScale";
+  }
+  else{
+    orgDiv.classList.remove("oActive");
+    valo.classList.remove("valActive");
+    orgImg.classList.remove("oScale");
+  }
+    
+}
+
+
 
 
 

@@ -11,3 +11,6 @@ btn2.addEventListener('click',()=>{
   btn3.addEventListener('click',()=>{
     container2.classList.remove('show');
   })
+
+
+  
