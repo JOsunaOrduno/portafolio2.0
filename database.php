@@ -1,7 +1,7 @@
 <?php
 
 class Database{
-    
+ 
     private $hostname = 'localhost:3306';
     private $database = 'cisteam2_pruebas';
     private $username = 'cisteam2_dario';
@@ -13,7 +13,7 @@ class Database{
     private $username = 'root';
     private $password = '';
     private $charset = "utf8";
-    */
+   */
     function conectar(){ 
         try{
             $conexion = "mysql:host=".$this->hostname."; dbname=".$this->database ."; charset=".$this->charset;

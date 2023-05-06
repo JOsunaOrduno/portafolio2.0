@@ -1,4 +1,5 @@
 
+
 .login-cont{
     display: flex;
     flex-direction: column;
@@ -126,7 +127,7 @@ button{
 
 .form-regis-box{
     width: 500px;
-    height: 600px;
+    height: 700px;
     background-color: transparent;
     border: 2px solid rgb(255,255,255,0.5);
     border-radius: 20px;
@@ -136,6 +137,7 @@ button{
     justify-content: center;
     align-items: center;
     margin-bottom: 20PX;
+    z-index: 1;
 }
 
 .form-regis-box h2{
@@ -161,18 +163,100 @@ button{
 }
 
 .form-regis-box button{
-    height: 10%;
-    width: 60%;
-    margin-top: 20px;
+    width: 300px;
+    height: 40px;
 }
 
 .form-regis-box .Noti{
     padding-top: 20px;
+    padding-bottom: 20px;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+.contenedor_espera{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 700px;
+    background-color: #001727;
+    opacity: 0;
+    z-index: 0;
+    border: 2px solid rgb(255,255,255,0.5);
+    border-radius: 20px;
+    margin-top: 160px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 1s;
+}
+
+.showSDASDASD{
+    opacity: 1;
+    z-index: 2;
+}
+
+.contenedor_espera .loader{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.contenedor_espera .loader span{
+    position: absolute;
+    top:0;
+    left: 0; 
+    width: 100%;
+    height: 100%;
+    transform: rotate(calc(18deg * var(--i)));
+}
+
+.contenedor_espera .loader span::before{
+    content: '';
+    position: absolute;
+    top:0;
+    left: 0; 
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: aquamarine;
+    box-shadow: 0 0 10px aquamarine,
+                0 0 20px aquamarine,
+                0 0 40px aquamarine,
+                0 0 60px aquamarine,
+                0 0 80px aquamarine,
+                0 0 100px aquamarine;
+    animation: animate 2s linear infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes animate{
+    0%{
+        transform: scale(1);
+    }80%,100%{
+        transform: scale(0);
+    }
+}
+
+.contenedor_espera .mensaje{
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 20px;
+    color: aquamarine;
+}
+
+.contenedor_espera button{
+  margin-top: 20px;
+  width: 60%;
+  height: 50px;
 }
 
 @media screen and (max-width: 470px){

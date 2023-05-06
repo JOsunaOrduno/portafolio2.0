@@ -13,8 +13,10 @@
             <li>Email</li>
             <li>administracion@cisteam.com.mx</li>
             <li>Contacto</li>
-            <li>2222 0084 67 </li>
+            <li>2222 0084 67 </li>    
             </ul>
+            <a download="REQUISITOS" href="dowlog/REQUISITOS.zip"><div  class="btnDatos">Obtener datos bancarios</div></a>
+            
         </div>
         <div class="form"> 
                 <form method="POST" action="return false" onsubmit="return false">

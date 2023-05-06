@@ -7,9 +7,7 @@
                 <i class="ri-close-line search_close"></i>
             </div>
     </form>  
-     <!-- Contenedor del nav -->
     <nav id="nav">
-        <!-- Logo de cisteam -->
         <img src="Img/cisteam_aguila.png" alt=""  class="logo">
         <a href="#" class="btn-neon">
         <span id="span1"></span>
@@ -18,7 +16,6 @@
         <span id="span4"></span>    
         Inicio
         </a>
-        <!-- Botones con efecto neon -->
         <a href="#" class="btn-neon">Nosotros
         <span id="span1"></span>
         <span id="span2"></span>
@@ -43,9 +40,7 @@
         <span id="span3"></span>
         <span id="span4"></span>
         </a> 
-        <!-- Confomre al inicio de sesion de la pagina, el modal que se abrira, mostrara el nombre y correo del usuario -->
        <?php
-            
             if (isset($_SESSION['activo']) && $_SESSION['activo'] == 1) {     
                 echo '<div class="nombreUS">';
                 echo $_SESSION['nombre'];

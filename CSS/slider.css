@@ -1,5 +1,5 @@
 
-/* X de cerrado de la descripcion del slider */
+
 .closeD {
   color: #aaa;
   float: right;
@@ -18,7 +18,7 @@
 }
 
 
-/*Formato de la descripcion de los videos*/
+
 #videos h1{
   color: crimson;
   font-size: large;
@@ -30,6 +30,19 @@
   color: white;
 }
 
+.container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.mySlides {
+    display: none;
+    justify-content: center;
+    position: relative;
+    height: 433px;
+}
+
 .desc{
   position: absolute;
   height: 100%;
@@ -39,17 +52,6 @@
   z-index: -1;
   transition: 1s ease;
 }
-
-
-/*Contenedor del slider de videos*/
-.mySlides {
-    display: none;
-    justify-content: center;
-    position: relative;
-    height: 433px;
-}
-
-
 
 /* Slideshow container */
 .slideshow-container {
@@ -131,10 +133,25 @@
   animation-duration: 1.5s;
 }
 
-/*Formato de los videos*/
 #videos{
   height:  450px;
 }
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+
+.other{
+  opacity: 1;
+  transform: translateX(117%);
+  transition: 0.7s ease;
+  z-index: 1;
+}
+
+
 
 #videos iframe{
   border:  none;
@@ -144,33 +161,17 @@
   z-index: 2;
 }
 
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
 
-
-/*Accion para activar la descripcion*/
-.other{
-  opacity: 1;
-  transform: translateX(117%);
-  transition: 0.7s ease;
-  z-index: 1;
-}
-
-/*Accion para mover el video*/
 .activeVid{
   transform: translateX(-21.8%);
   transition: 0.7s;
 }
-
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 1000px) {
   section{
     width: 95%;
   }
 
-  /*Movimiento de la descripcion en caso de tener una pantalla mas chica*/
   .other{
     transform: translatey(143%);
     height: 180px;
@@ -179,7 +180,7 @@
   #videos iframe{
     width: 100%;
   }
-  /*Movimiento de los videos en cambio de no poder moverlo horizontalmente*/
+
   .activeVid{
     transform: translatey(-14%);
     height: 300px !important;
@@ -217,9 +218,3 @@
 
 }
 
-/*
-.container{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-}*/
