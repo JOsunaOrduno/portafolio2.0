@@ -1,4 +1,18 @@
 
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                <span class="closeO">&times;</span>
+                <h1>Equipo Cisteam</h1>
+                </div>
+                <div class="modal-body">
+                    <img src="GIF/organigrama.gif" alt="">
+                </div>
+            </div>
+        </div>
+        
         <section id="videos">      
             <div class="slideshow-container">
 
@@ -115,6 +129,30 @@
             </div>
         </div>
 
+        <div class="tarjetas" id="TARJETAS2">
+            <div class = "container2">
+                <!--Primer tarjeta-->
+                <div class = "card">
+                    <h1>Organigrama</h1>
+                    <!--Contenido de la tarjeta, se puede cambiar el texto o la imagen sin problema -->
+                    <div class="content">
+                        <a id="orgBtn"><div  class="cardBtns">Organigrama</div></a>
+                    </div>
+                    <img src="Img/misión1.png" class="imgmision">
+                </div>
+        
+                <div class = "card">
+                    <h1>Datos</h1>
+                    <div class="content">
+                        <a download="REQUISITOS" href="dowlog/REQUISITOS.zip"><div  class="cardBtns">Obtener datos bancarios</div></a>
+                    </div>
+                    <img src="Img/visión1.png">
+                </div>
+                
+                
+            </div>
+        </div>
+
         <!--Planeta de los valores centrado para el circulo -->
         <div id="circulo">
             <div id="valor">
@@ -127,5 +165,5 @@
             <div id = "clientes">
                 <img src="Img/clientes_.gif" alt="">
             </div>
-            <div id="organigrama">organigrama</div>
+            <!--<div id="organigrama">organigrama</div>-->
         </div>

@@ -137,12 +137,11 @@
     ?> 
 
     <script src="JS/nav.js"></script>
-    <script src="JS/organigrama.js"></script>
             <?php
 
             if (isset($_SESSION['activo']) && $_SESSION['activo'] == 1) {
 
-                echo "<script src='JS/script2.js'></script>";
+                echo "<script src='JS/modals.js'></script>";
 
             }
 

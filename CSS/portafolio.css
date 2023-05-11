@@ -209,19 +209,7 @@ section img{
     #circulo img{
         width: 100%;
     }
-<<<<<<< HEAD
-=======
-    /*Cambio de tamanio del fondo en caso de estar en un celular*/
-    body 
-    {
-        background-size: 150% 95%;
-        background-position: 48%;
-    }
-    #organigrama{
-        font-size: 15px;
->>>>>>> f8edff394081d083126767c9832fe5c4054a4b99
 
-    }
 
     #circulo #organiImagen .oScale{
         width: 100%;
