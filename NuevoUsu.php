@@ -13,7 +13,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
     $email = $_POST['email'];
     $cont = 0;
 
-    if($password  == "" && $nombre == "" && $email==""){
+    if($password == "" || $nombre == "" || $email==""){
         echo '<style>#Regis{opacity:1;}</style>Todos los campos deben estar llenos';
     }else{
         echo '<style>#Regis{opacity:1;}</style>';
@@ -33,10 +33,10 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
         }else{
             if($_POST['g-recaptcha-response']) {
                 $captcha = $_POST['g-recaptcha-response'];
-                $secret = "6Ldfe-YlAAAAAF9RaWfIeHTu-d17M0ic4zd81uT5";
-                $json = json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=". $secret . "&response=" . $captcha), true);
+                $secret = "6Lc6n-olAAAAAIBz4t9-yQlUkorOzlqRpPShf4_M";
+                $json = json_decode(file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$secret.'&response='.$captcha), true);
                 if($json['success']) {
-                    
+                    /*
                     $correo ="administracion@cisteam.com.mx";
                     echo 'Sus datos se han enviado<br> Su solicitud sera revisada por un responsable';
                     require("includes/class.phpmailer.php");
@@ -62,7 +62,7 @@ $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
                                 "Password: 	$password\n<br />\n<br />".
                                 "El usuario espera una contestacion con la confirmacion de su ingreso\n<br />\n<br />";       
                     $mail->Send();
-                    
+                    */
                     echo "Luzverde";
                 } else {
                     echo "Captacha Error";

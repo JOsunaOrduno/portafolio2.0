@@ -34,7 +34,7 @@
                     <input type="email" name="email"  id="emailC" placeholder="Correo" /><br>
                     <label for="">Ingresa su contraseña</label><br>
                     <input type="password" name="clave"  id="claveC" placeholder="Contraseña" /><br>
-                    <div class="g-recaptcha" data-sitekey="6Ldfe-YlAAAAAO7L3ccN4FU-sgoFcx4j-4WBOyRg"></div>
+                    <div class="g-recaptcha" data-sitekey="6Lc6n-olAAAAANqjM8uL7jbH2DcRNRj1pgFlzfWO"></div>
                 </form>
             </div>
             <label  class="Noti" id="Regis"></label>
