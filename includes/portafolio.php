@@ -133,20 +133,20 @@
             <div class = "container2">
                 <!--Primer tarjeta-->
                 <div class = "card">
-                    <h1>Organigrama</h1>
+                    <h1>ORGANIGRAMA</h1>
                     <!--Contenido de la tarjeta, se puede cambiar el texto o la imagen sin problema -->
                     <div class="content">
                         <a id="orgBtn"><div  class="cardBtns">Organigrama</div></a>
                     </div>
-                    <img src="Img/misión1.png" class="imgmision">
+                    <img src="Img/organim.png" class="imgmision">
                 </div>
         
                 <div class = "card">
-                    <h1>Datos</h1>
+                    <h1>DATOS</h1>
                     <div class="content">
-                        <a download="REQUISITOS" href="dowlog/REQUISITOS.zip"><div  class="cardBtns">Obtener datos bancarios</div></a>
+                        <a download="REQUISITOS" href="dowlog/REQUISITOS.zip"><div  class="cardBtns">Datos del proveedor</div></a>
                     </div>
-                    <img src="Img/visión1.png">
+                    <img src="Img/datosprov.png">
                 </div>
                 
                 
@@ -159,7 +159,7 @@
                 <h2>Valores</h2>
                 <img src="GIF/valoresNav.gif" alt="">
             </div>
-            <div id="organiImagen"><img src="GIF/organigrama.gif" id="org" alt=""></div>
+            <!--<div id="organiImagen"><img src="GIF/organigrama.gif" id="org" alt=""></div>-->
         </div>
         <div id="final">
             <div id = "clientes">

@@ -15,7 +15,7 @@
             <li>Contacto</li>
             <li>2222 0084 67 </li>    
             </ul>
-            <a download="REQUISITOS" href="dowlog/REQUISITOS.zip"><div  class="btnDatos">Obtener datos bancarios</div></a>
+            <a download="REQUISITOS" href="dowlog/REQUISITOS.zip"><div  class="btnDatos">Datos del proveedor</div></a>
             
         </div>
         <div class="form"> 
