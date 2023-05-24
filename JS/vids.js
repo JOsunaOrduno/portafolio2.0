@@ -8,14 +8,14 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('Interface', {
-        videoId: 'KOrperYgVSA',
+        videoId: 'sKbPCJsbIuc',
         events: {
             'onStateChange': onPlayerStateChange,
         }
     });
 
     player = new YT.Player('Inventario', {
-        videoId: 'laFhP3i_nvo',
+        videoId: 'lWGuuNjhl5o',
         events: {
             'onStateChange': onPlayerStateChange
         }
@@ -23,19 +23,32 @@ function onYouTubeIframeAPIReady() {
 
 
     player = new YT.Player('GPS', {
-        videoId: 'PaL29FClOEw',
+        videoId: 'ZkyrwIQOaZI',
         events: {
             'onStateChange': onPlayerStateChange
         }
     });
 
     player = new YT.Player('Etiquetado', {
-      videoId: 'CLhDVYxpYiA',
+      videoId: 'zxUaie2DadM',
       events: {
           'onStateChange': onPlayerStateChange
       }
-  });
+    });
     
+    player = new YT.Player('SICOINReporte', {
+      videoId: 'lPW5kmuvev4',
+      events: {
+          'onStateChange': onPlayerStateChange
+      }
+    });
+
+    player = new YT.Player('SICOINLogistica', {
+      videoId: 'Sy_OuWfJHbY',
+      events: {
+          'onStateChange': onPlayerStateChange
+      }
+    });
     
 }
 

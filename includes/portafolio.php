@@ -78,6 +78,31 @@
                     </div>
                 </div>
 
+                <div class="mySlides fade">
+                    <div class="video" id="SICOINReporte"></div>
+                    <div class="desc">
+                        <span class="closeD">&times;</span>
+                        <h1>Sicoin Reporte</h1>
+                        <p>      
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente 
+                            laboriosam ipsa quasi totam saepe deserunt illo fugiat officiis distinctio
+                             consequuntur quae expedita odio quibusdam vitae earum, facere dolorem, enim non.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="video" id="SICOINLogistica"></div>
+                    <div class="desc">
+                        <span class="closeD">&times;</span>
+                        <h1>Sicoin Logistica</h1>
+                        <p>      
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+                            Maxime illum molestiae consequatur blanditiis molestias quos dignissimos adipisci necessitatibus 
+                            laborum. Nulla quos veniam molestias numquam distinctio ipsam explicabo accusamus fuga odit.
+                        </p>
+                    </div>
+                </div>
                 <a class="prev" id="prev" onclick="plusSlides(-1)">❮</a>
                 <a class="next" id="next" onclick="plusSlides(1)">❯</a>
 
@@ -90,6 +115,8 @@
                 <span class="dot" onclick="currentSlide(2)"></span> 
                 <span class="dot" onclick="currentSlide(3)"></span> 
                 <span class="dot" onclick="currentSlide(4)"></span> 
+                <span class="dot" onclick="currentSlide(5)"></span> 
+                <span class="dot" onclick="currentSlide(6)"></span> 
             </div>
         </section>
 
